@@ -1,8 +1,13 @@
 terraform {
   required_version = "~>1.2"
 
-  backend "local" {
-    path = "state.tfstate"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "shchuko"
+
+    workspaces {
+      name = "parents-home-nas"
+    }
   }
 
   required_providers {
