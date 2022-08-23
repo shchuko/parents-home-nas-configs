@@ -6,12 +6,10 @@ Pods and use as systemd services. Deployed Nextcloud is **completely** insecure.
 Deployment steps:
 
 1. _Optional:_ Select a directory to store data into and execute `export DATA_ROOT_DIR=/path/to/data/dir`. The default
-   one
-   is `/mnt/rootnasdata`
+   one is `/mnt/rootnasdata`
 2. Run `./deploy.sh`
-3. _Optional:_ set custom ONLYOFFICE
-   document server address to be provided to clients using `export NEXTCLOUD_ADDRESS=http://addres.here/`, the default
-   is `http://localparentsnas.net:8090/`
+3. _Optional:_ set custom ONLYOFFICE document server address to be provided to clients
+   using `export NEXTCLOUD_ADDRESS=http://addres.here/`, the default is `http://localparentsnas.net:8090/`
 4. When Nextcloud app is started, complete the installation - run `./post-deploy.sh`. Expected to be executed only once.
 5. **Done! Now you have Nextcloud available on `localhost:8080` and ONLYOFFIVE on `localhost:8090` connected to
    Nextcloud.**
