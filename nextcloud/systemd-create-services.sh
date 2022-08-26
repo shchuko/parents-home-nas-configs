@@ -10,11 +10,11 @@ podman generate systemd --files --name "onlyoffice"
 
 systemctl --user daemon-reload
 
-systemctl --user enable pg-nextcloud.service
+systemctl --user enable pod-pg-nextcloud.service
 systemctl --user enable pod-onlyoffice.service
 systemctl --user enable pod-nextcloud.service
 
-systemctl --user start pg-nextcloud.service
+systemctl --user start pod-pg-nextcloud.service
 systemctl --user start pod-onlyoffice.service
 systemctl --user start pod-nextcloud.service
 

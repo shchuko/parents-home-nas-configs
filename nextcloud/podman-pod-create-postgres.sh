@@ -26,7 +26,7 @@ if ! podman container exists "$DB_CONTAINER_NAME"; then
     -e POSTGRES_PASSWORD="$POSTGRES_PASSWORD" \
     -u "$(id -u):$(id -g)" \
     -v /etc/passwd:/etc/passwd:ro \
-    -v "$POSTGRES_DATA_DIR":/var/lib/postgresql/data:Z \
+    -v "$POSTGRES_DATA_DIR":/var/lib/postgresql/data \
     "docker.io/library/postgres:$POSTGRES_VERSION"
   echo "Container '$DB_CONTAINER_NAME' creation successful"
 else
