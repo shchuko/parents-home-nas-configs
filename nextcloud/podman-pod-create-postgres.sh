@@ -20,7 +20,7 @@ fi
 # https://github.com/docker-library/postgres/pull/253
 DB_CONTAINER_NAME="$POSTGRES_POD_NAME-db"
 if ! podman container exists "$DB_CONTAINER_NAME"; then
-  podman create --name "$DB_CONTAINER_NAME" \
+  podman create --pod "$POSTGRES_POD_NAME" --name "$DB_CONTAINER_NAME" \
     -e POSTGRES_DB="$POSTGRES_DB" \
     -e POSTGRES_USER="$POSTGRES_USER" \
     -e POSTGRES_PASSWORD="$POSTGRES_PASSWORD" \
