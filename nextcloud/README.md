@@ -14,8 +14,10 @@ Deployment steps:
 5. **Done! Now you have Nextcloud available on `localhost:8080` and ONLYOFFIVE on `localhost:8090` connected to
    Nextcloud.**
 
-Creates two pods with containers:
+Creates three pods with containers:
 
+- `pg-nextcloud` - Postgres DB for Nextcloud, wrapped with `pod-pg-nextcloud.service`
+    - `pg-nextcloud-db` - Postgres DB deployed
 - `nextcloud` - Nextcloud app with required resources, wrapped with `pod-nextcloud.service`
     - `nextcloud-db` - Postgres DB deployed
     - `nextcloud-cron` - cron.sh provided by Nextcloud

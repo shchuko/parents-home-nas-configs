@@ -4,7 +4,7 @@ set -euxo pipefail
 ONLYOFFICE_ADDRESS="${ONLYOFFICE_ADDRESS:-http://localparentsnas.net:8090/}"
 
 # Complete NextCloud installation
-podman exec -u www-data nextcloud-app php occ --no-warnings maintenance:install --admin-user="admin" --admin-pass="admin" --database="pgsql" --database-host="127.0.0.1" --database-name="nextcloud" --database-user="nextcloud" --database-pass="nextcloud"
+podman exec -u www-data nextcloud-app php occ --no-warnings maintenance:install --admin-user="admin" --admin-pass="admin" --database="pgsql" --database-host="pg-nextcloud" --database-name="nextcloud" --database-user="nextcloud" --database-pass="nextcloud"
 
 # Home internal network - all domains are trusted
 podman exec -u www-data nextcloud-app php occ --no-warnings config:system:set trusted_domains "2" --value="*"
