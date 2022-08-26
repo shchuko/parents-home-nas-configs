@@ -22,7 +22,7 @@ mkdir -p "$ONLYOFFICE_DATA_DIR"
 mkdir -p "$ONLYOFFICE_LOGS_DIR"
 
 ./podman-create-network.sh
-./podmap-pod-create-postgres.sh
+./podman-pod-create-postgres.sh
 ./podman-pod-create-nextcloud.sh
 ./podman-pod-create-onlyoffice.sh
 ./systemd-create-services.sh
