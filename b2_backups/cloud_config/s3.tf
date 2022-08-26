@@ -1,4 +1,4 @@
-resource "b2_bucket" "data_backups" {
-  bucket_name = "parents-nas-data-backups"
+resource "b2_bucket" "parents_nas_nextcloud" {
+  bucket_name = "parents-nas-nextcloud"
   bucket_type = "allPrivate"
 }
