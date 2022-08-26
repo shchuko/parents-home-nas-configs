@@ -1,0 +1,3 @@
+telegram.api.key=0000000000:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+telegram.users.allowed=shchuko
+shell.path=/usr/bin/bash

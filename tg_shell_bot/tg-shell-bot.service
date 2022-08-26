@@ -1,0 +1,17 @@
+[Unit]
+Description=TG-SHELL-BOT
+After=syslog.target network.target
+
+[Service]
+SuccessExitStatus=143
+
+Type=simple
+
+WorkingDirectory=/home/shchuko
+ExecStart=/usr/bin/java -jar /home/shchuko/.jar/tg-shell-bot-fat-1.0.jar
+ExecStop=/bin/kill -15 $MAINPID
+Restart=always
+TimeoutStopSec=20
+
+[Install]
+WantedBy=default.target
