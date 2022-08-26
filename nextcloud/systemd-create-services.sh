@@ -5,7 +5,7 @@ mkdir -p "$HOME/.config/systemd/user"
 cd "$HOME/.config/systemd/user"
 
 podman generate systemd --files --name "pg-nextcloud"
-podman generate systemd --files --name "nextcloud"
+podman generate systemd --files --name "nextcloud" --requires "pod-pg-nextcloud.service"
 podman generate systemd --files --name "onlyoffice"
 
 systemctl --user daemon-reload
