@@ -1,0 +1,6 @@
+[Unit]
+Description=Run duplicity backup
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'duplicity-backup.sh backup'
