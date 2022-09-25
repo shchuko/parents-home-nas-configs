@@ -4,7 +4,7 @@ set -euxo pipefail
 : "$B2_KEY_ID"
 : "$B2_APPLICATION_KEY"
 
-gpg import key.pub
+gpg --import key.pub
 
 mkdir -p "$HOME/.config/systemd/user"
 mkdir -p "$HOME/.local/bin"
