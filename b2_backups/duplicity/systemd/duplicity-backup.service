@@ -3,4 +3,5 @@ Description=Run duplicity backup
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -c 'duplicity-backup.sh backup'
+EnvironmentFile=%h/.local/config/duplicity/duplicity-settings.env
+ExecStart=%h/.local/bin/duplicity-backup.sh backup
