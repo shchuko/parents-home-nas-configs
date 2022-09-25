@@ -1,8 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-source "$HOME/.local/config/duplicity/duplicity-settings.sh"
-
 : "$GPG_KEY_ID"
 
 : "$BACKUP_ROOT"
