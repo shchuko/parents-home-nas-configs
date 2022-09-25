@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euxo pipefail
+set -euo pipefail
 
 source "$HOME/.local/config/duplicity/duplicity-settings.sh"
 

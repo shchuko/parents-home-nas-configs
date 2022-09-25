@@ -1,8 +1,10 @@
 #!/bin/bash
 set -euxo pipefail
 
+set +x
 : "$B2_KEY_ID"
 : "$B2_APPLICATION_KEY"
+set -x
 
 gpg --import key.pub
 
