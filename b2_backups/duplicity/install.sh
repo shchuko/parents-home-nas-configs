@@ -7,6 +7,8 @@ set +x
 set -x
 
 gpg --import key.pub
+echo -e "5\ny\n" | gpg --command-fd 0 --edit-key parentsnasrobot@noreply.com trust
+
 pip3 install boto3
 
 mkdir -p "$HOME/.config/systemd/user"
